@@ -33,7 +33,7 @@ Tarot is **the first domain implemented**, not the point of the method.
 |---|---|---|
 | **General method** | `docs/01_通用框架/01_象征物体系.md` · `engine/engine.py` | domain-agnostic, no tarot vocabulary |
 | **Domain layer (replaceable)** | `engine/color_rules.py` — a *toy* domain (light/shadow) | proves the boundary is real |
-| **Tarot branch** | `docs/02_塔罗分支/02_塔罗体系.md` · `docs/02_塔罗分支/塔罗推理链.html` | **rules only — no implementation** |
+| **Tarot branch** | the [`tarot` branch](https://github.com/kite-y/symbolic-framework/tree/tarot) | **rules only — no implementation**；not in `main` |
 
 | Path | What it is |
 |---|---|
@@ -41,12 +41,7 @@ Tarot is **the first domain implemented**, not the point of the method.
 | `engine/color_rules.py` | **Domain layer (example)** — fully replaceable. What ships here is a *toy* domain (light/shadow, warm/cold), to prove the layer boundary. |
 | `demo/demo_daily.py` | Runs the engine on a **non-tarot** domain. No dictionary required. |
 | `docs/01_通用框架/01_象征物体系.md` | **The method itself** — the general system, domain-agnostic. |
-| `docs/02_塔罗分支/02_塔罗体系.md` | **The method applied to tarot** — reversals, colour pairs, the 6-row table. |
 | `docs/01_通用框架/方法论流程图.html` | Interactive — the five steps, seven tiers, three states. |
-| `docs/02_塔罗分支/塔罗推理链.html` | Interactive — how one card becomes one paragraph. |
-| `docs/02_塔罗分支/双牌互动.html` | Interactive — how two cards are actually paired, and why the result is **bidirectional**. |
-| `docs/02_塔罗分支/歧点与瑕点.html` | Interactive — **gather** (a whole that flows one way out) vs **scatter** (fragments that flow one way in). |
-| `docs/体系架构图.html` | Interactive overview — general spine · tarot branch · output, and how they connect. |
 
 **Status (honest scope):** the generic engine + the example domain layer are complete and runnable. The **full domain dictionaries**, the 78-card generated data, and the spread-level pipeline are **not** in this repository.
 
@@ -74,7 +69,7 @@ Contact: **GitHub [@kite-y](https://github.com/kite-y)** — questions and corre
 |---|---|---|
 | **通用本体** | [`docs/01_通用框架/01_象征物体系.md`](docs/01_通用框架/01_象征物体系.md) · [`engine/engine.py`](engine/engine.py) | 元素 / 锚点 / 七档属性 / 三态关系。**不含任何领域词** |
 | **领域层（可替换）** | [`engine/color_rules.py`](engine/color_rules.py) | 仓库里给的是**玩具领域**（光/影、暖/冷），用来证明"换一本字典就能换领域" |
-| **塔罗分支** | [`docs/02_塔罗分支/02_塔罗体系.md`](docs/02_塔罗分支/02_塔罗体系.md) · [`docs/02_塔罗分支/塔罗推理链.html`](docs/02_塔罗分支/塔罗推理链.html) | **只有规则说明，没有实现**：牌面原文、78 张字典、牌阵都不在本仓库 |
+| **塔罗分支** | [`tarot` 分支](https://github.com/kite-y/symbolic-framework/tree/tarot) | **只有规则说明，没有实现**：牌面原文、78 张字典、牌阵都不在本仓库。<br>**主分支不含塔罗** |
 
 > 一句话：**通用本体是"方法"，塔罗分支是"方法的一本字典"**。仓库带方法 + 一个玩具字典；塔罗那本字典只写了规则，没给数据。
 
@@ -205,18 +200,14 @@ demo 会依次展示五件事：
 │   ├── demo_daily.py          非塔罗领域的 demo
 │   └── output.txt             实际运行输出
 └── docs/
-      ├── README.md                  docs 索引：通用 / 塔罗 / 跨层
-      ├── 体系架构图.html/.png        跨层全景：三块怎么接（动态）
-      ├── 01_通用框架/
-      │   ├── 01_象征物体系.md        通用本体（对外版）
-      │   ├── 引擎分层说明.md          引擎 / 领域两层
-      │   ├── 方法论流程图.html/.png   五步法可视化
-      │   └── 架构图.png              引擎分层图
-      └── 02_塔罗分支/
-          ├── 02_塔罗体系.md         塔罗分支（只有规则）
-          ├── 塔罗推理链.html/.png    一张牌 / 多张牌怎么说
-          ├── 双牌互动.html/.png      两张牌怎么对上（动态）
-          └── 歧点与瑕点.html/.png    合与散（动态）
+      ├── README.md                  docs 索引（通用层）
+      └── 01_通用框架/
+          ├── 01_象征物体系.md        通用本体（对外版）
+          ├── 引擎分层说明.md          引擎 / 领域两层
+          ├── 方法论流程图.html/.png   五步法可视化
+          └── 架构图.png              引擎分层图
+
+    塔罗分支不在 main 上 —— 见 tarot 分支。
 ```
 
 ---
