@@ -26,7 +26,11 @@ from typing import List, Optional, Dict, Any
 # ═══════════════════════════════════════════════════════════════
 
 class Attribute(Enum):
-    """属性只有三性：阴 / 阳 / 中。不做七档，不做量化。"""
+    """默认档位：阴 / 阳 / 中。
+
+    ★ 档位不是固定的：任何领域都可以用自己的质化档位（比如 冷/温/热、
+      向内/中立/向外），但必须同时提供对应的状态表 —— 见 Profile。
+    """
     YIN = "阴"
     YANG = "阳"
     NEUTRAL = "中"
@@ -44,16 +48,49 @@ class State(Enum):
 _BaseTable = Dict[frozenset, State]
 
 
-def judge(attr_a: Attribute, attr_b: Attribute,
-          table: Optional[_BaseTable] = None) -> State:
-    """两个属性 → 状态。唯一真正的「计算」。
+@dataclass
+class Profile:
+    """一套档位配置：档位名单 + 对应的状态表。
 
-    没有给表时用最小默认表（阴/阳/中 三档），领域可以整张替换。
+    换档位 = 换 Profile；档位变了，状态表必须跟着换——
+    否则「阴/阳/中」的表拿去查「冷/温/热」，出来的状态是错的。
     """
+    name: str
+    tiers: List[str]
+    table: Dict[frozenset, State]
+
+    def state_of(self, a, b) -> State:
+        return self.table.get(frozenset((a, b)), State.NONE)
+
+
+DEFAULT_PROFILE = Profile(
+    name="阴 / 阳 / 中",
+    tiers=["阴", "阳", "中"],
+    table={
+        frozenset(("阴", "阳")): State.CONFLICT,
+        frozenset(("阴", "阴")): State.OVERLAP,
+        frozenset(("阳", "阳")): State.OVERLAP,
+        frozenset(("中", "阴")): State.HARMONY,
+        frozenset(("中", "阳")): State.HARMONY,
+        frozenset(("中", "中")): State.OVERLAP,
+    },
+)
+
+
+def judge(attr_a, attr_b, table=None, profile: Optional[Profile] = None) -> State:
+    """两个档位 → 状态。唯一真正的「计算」。
+
+    三种用法：
+        judge(a, b)                       # 用默认 阴/阳/中 + 6 行表
+        judge(a, b, profile=P)            # 换成某个领域自己的档位与表
+        judge(a, b, table={...})          # 只换表
+    档位可以是 Attribute 枚举，也可以是任意字符串。
+    """
+    if profile is not None:
+        return profile.state_of(attr_a, attr_b)
     if table is None:
         return _default_judge(attr_a, attr_b)
-    key = frozenset((attr_a, attr_b))
-    return table.get(key, State.NONE)
+    return table.get(frozenset((attr_a, attr_b)), State.NONE)
 
 
 # ─────────────────────────────────────────────────────────────
@@ -92,17 +129,19 @@ def with_intensity(meaning: str, intensity: str) -> str:
 
 # 基础关系表（6 行）—— 系统只用这一张，不做七档进阶
 BASIC_TABLE = {
-    frozenset((Attribute.YIN, Attribute.YANG)): State.CONFLICT,
-    frozenset((Attribute.YIN, Attribute.YIN)): State.OVERLAP,
-    frozenset((Attribute.YANG, Attribute.YANG)): State.OVERLAP,
-    frozenset((Attribute.NEUTRAL, Attribute.YIN)): State.HARMONY,
-    frozenset((Attribute.NEUTRAL, Attribute.YANG)): State.HARMONY,
-    frozenset((Attribute.NEUTRAL, Attribute.NEUTRAL)): State.OVERLAP,
+    frozenset(("阴", "阳")): State.CONFLICT,
+    frozenset(("阴", "阴")): State.OVERLAP,
+    frozenset(("阳", "阳")): State.OVERLAP,
+    frozenset(("中", "阴")): State.HARMONY,
+    frozenset(("中", "阳")): State.HARMONY,
+    frozenset(("中", "中")): State.OVERLAP,
 }
 
 
-def _default_judge(a: Attribute, b: Attribute) -> State:
-    return BASIC_TABLE.get(frozenset((a, b)), State.NONE)
+def _default_judge(a, b) -> State:
+    ka = a.value if isinstance(a, Attribute) else a
+    kb = b.value if isinstance(b, Attribute) else b
+    return BASIC_TABLE.get(frozenset((ka, kb)), State.NONE)
 
 
 # ═══════════════════════════════════════════════════════════════

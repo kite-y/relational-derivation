@@ -12,7 +12,7 @@ Meaning pairs with meaning to produce a new statement; attribute pairs with attr
 - When three or more elements share the same state, they **join into one whole** (*merge*); a whole's state **seeps into another**, growing a new statement (*seep*)
 - Every conclusion can be **traced back** to concrete elements: reproducible, traceable, refutable
 
-**What it does not do**: no quantification (meaning cannot be measured), no prediction (it only describes structure).
+**What it does not do**: no quantification (meaning cannot be measured) — **it only derives**; it does not predict and does not draw conclusions.
 
 ---
 
@@ -109,6 +109,8 @@ A domain supplies seven things, in order — and must be able to **return to the
 So there are only three states plus "no state"; intensity acts on *meaning* (excessive / deficient), never on *state*.
 
 **Its rigour does not come from numbers but from three things: reproducible, traceable, refutable.**
+
+**Deriving is not predicting**: derivation lays out relations that already exist; it never claims what will happen.
 
 ---
 
