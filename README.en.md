@@ -119,7 +119,7 @@ So there are only three states plus "no state"; intensity acts on *meaning* (exc
 | | Where | Holds |
 |---|---|---|
 | **Trunk (the method)** | branch `main` | everything that holds in any domain |
-| **Branch (first landing)** | branch [`tarot`](https://github.com/kite-y/relational-derivation/tree/tarot) | tarot: reversals, colour pairs, 6-row table, merge/seep, output format |
+| **Branch (first landing)** | **private repository** (not public) | tarot: reversals, colour pairs, 6-row table, merge/seep, output format |
 
 **Rule of thumb**: holds in another domain → trunk; does not → branch.
 
