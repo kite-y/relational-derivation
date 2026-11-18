@@ -12,6 +12,9 @@ Meaning pairs with meaning to produce a new statement; attribute pairs with attr
 - When three or more elements share the same state, they **join into one whole** (*merge*); a whole's state **seeps into another**, growing a new statement (*seep*)
 - Every conclusion can be **traced back** to concrete elements: reproducible, traceable, refutable
 
+**The one hard requirement: every step must be traceable.**
+A conclusion points back to its elements; an element points back to its material. Nothing else is required.
+
 **What it does not do**: no quantification (meaning cannot be measured) — **it only derives**; it does not predict and does not draw conclusions.
 
 ---
