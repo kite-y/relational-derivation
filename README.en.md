@@ -143,6 +143,9 @@ So there are only three states plus "no state"; intensity acts on *meaning* (exc
 
 Questions, corrections, or applying it to your own domain — please open an [Issue](https://github.com/kite-y/relational-derivation/issues).
 
+Or email: **zhiyuan_Y@outlook.com**
+
+
 ---
 
 [中文](README.md) · **English**

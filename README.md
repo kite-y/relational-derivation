@@ -151,3 +151,6 @@
 ## 联系
 
 问题、指正、想用在自己的领域里 —— 都欢迎开 [Issue](https://github.com/kite-y/relational-derivation/issues)。
+
+也可以发邮件：**zhiyuan_Y@outlook.com**
+（我会看，但回复不一定及时。）

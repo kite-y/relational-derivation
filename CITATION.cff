@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "如果要在研究或写作中引用这套方法，请使用下面的信息。"
+title: "关系推导法 / Relational Derivation"
+abstract: "一套从「关系」推出结论的定性方法：把事物拆成含义与属性，两条线各自配对，从关系状态合成结构。不量化、不预测，只推演；每一步都要求可回溯。"
+type: software
+authors:
+  - family-names: "kite-y"
+    alias: "kite-y"
+    email: "zhiyuan_Y@outlook.com"
+repository-code: "https://github.com/kite-y/relational-derivation"
+url: "https://github.com/kite-y/relational-derivation"
+version: "0.2.0"
+date-released: "2026-11-18"
+license: MIT
+keywords:
+  - qualitative-analysis
+  - structural-analysis
+  - methodology
+  - reasoning
+  - ontology
+  - knowledge-representation
