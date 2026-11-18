@@ -246,8 +246,8 @@ def merge(collections: List[Collection], table=None,
           direction: str = "") -> Optional[HiddenSet]:
     """聚：至少三个集合体，各自的本有状态形成重叠态。
 
-    条件：三者的本有状态必须有共同的「重叠」 —— 也就是说
-    每个集合体都能拿出一个相同的本有状态。
+    匹配规则：只取「一个一个对得上」的状态，用掉即止；
+    没有就是没有，不强行凑。集合体内部的状态全部列出，不挑代表。
     """
     if len(collections) < 3:
         return None
