@@ -1,0 +1,25 @@
+﻿文档与方法论许可 / Documentation License
+=====================================
+
+本仓库的「文档与方法论」部分（docs/ 目录下的全部内容，含 Markdown、
+HTML 图示、图片，以及 README 中的方法论述）采用：
+
+    Creative Commons Attribution-NonCommercial 4.0 International
+    （CC BY-NC 4.0）
+
+你可以：
+  · 复制、分发本文档
+  · 修改、演绎本文档
+  · 在非商业目的下使用
+
+你必须：
+  · 署名（注明来源）
+  · 保留本许可声明
+
+你不可以：
+  · 将本文档或其演绎作品用于商业目的
+
+完整条款：https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+---
+代码部分（engine/、demo/）使用 MIT，见 LICENSE 文件。

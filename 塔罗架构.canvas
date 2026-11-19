@@ -1,0 +1,23 @@
+{
+	"nodes":[
+		{"id":"5b56a8b80a19477e","type":"group","x":-560,"y":-280,"width":1120,"height":640,"label":"基础理论部分"},
+		{"id":"bec8e20f9cd389e2","type":"text","text":"象征物本体（潜意识活动信息：非逻辑性）","x":165,"y":-222,"width":359,"height":60},
+		{"id":"44737d97883ba9b0","type":"text","text":"象征物集合","x":-282,"y":-58,"width":131,"height":60},
+		{"id":"c1849c7788507fa2","type":"text","text":"象征物（牌面图案）","x":-317,"y":-222,"width":200,"height":60},
+		{"id":"169f6ae2727269e5","type":"text","text":"某一段的信息集合","x":253,"y":-60,"width":187,"height":60},
+		{"id":"81c0c0b91cf226a1","type":"text","text":"”过去节点“/”前因节点“信息","x":-527,"y":100,"width":245,"height":60},
+		{"id":"9acdcb5c0b0dfd14","type":"text","text":"”未来节点“/”后果节点“信息","x":-151,"y":100,"width":237,"height":60}
+	],
+	"edges":[
+		{"id":"cb91bbe09dca603d","fromNode":"bec8e20f9cd389e2","fromSide":"bottom","toNode":"169f6ae2727269e5","toSide":"top"},
+		{"id":"12f80d4382f8d885","fromNode":"c1849c7788507fa2","fromSide":"right","toNode":"bec8e20f9cd389e2","toSide":"left","label":"反映"},
+		{"id":"a7d2c03c6657d611","fromNode":"169f6ae2727269e5","fromSide":"left","toNode":"44737d97883ba9b0","toSide":"right"},
+		{"id":"1e4decf0e1b1eeb9","fromNode":"44737d97883ba9b0","fromSide":"bottom","toNode":"81c0c0b91cf226a1","toSide":"top"},
+		{"id":"b754affccfd6e1c5","fromNode":"44737d97883ba9b0","fromSide":"bottom","toNode":"9acdcb5c0b0dfd14","toSide":"top"},
+		{"id":"bfaeb548f1ad2d52","fromNode":"c1849c7788507fa2","fromSide":"bottom","toNode":"44737d97883ba9b0","toSide":"top"},
+		{"id":"5f378f51abc91cb9","fromNode":"81c0c0b91cf226a1","fromSide":"right","toNode":"9acdcb5c0b0dfd14","toSide":"left","label":"推演"},
+		{"id":"689420df0e18f9b4","fromNode":"9acdcb5c0b0dfd14","fromSide":"bottom","toNode":"81c0c0b91cf226a1","toSide":"bottom","label":"影响"},
+		{"id":"2e10cc8ef0f46714","fromNode":"81c0c0b91cf226a1","fromSide":"bottom","toNode":"9acdcb5c0b0dfd14","toSide":"bottom"},
+		{"id":"87e72eeaa0a91ee8","fromNode":"9acdcb5c0b0dfd14","fromSide":"left","toNode":"81c0c0b91cf226a1","toSide":"right"}
+	]
+}
