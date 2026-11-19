@@ -99,6 +99,7 @@ A domain supplies seven things, in order — and must be able to **return to the
 | Order | File | Content |
 |---|---|---|
 | **1** | [docs/01_通用框架/基底方法论（文字）.md](docs/01_通用框架/基底方法论（文字）.md) | the methodology itself (Chinese) |
+| 2 | [docs/01_通用框架/图/](docs/01_通用框架/图/) | three structure diagrams |
 | **3** | [docs/01_通用框架/引擎分层说明.md](docs/01_通用框架/引擎分层说明.md) | engine layering + colour and intensity |
 | 4 | [engine/engine.py](engine/engine.py) · [demo/demo_daily.py](demo/demo_daily.py) | the engine (no domain words) + a light/shadow demo |
 
