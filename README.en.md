@@ -107,7 +107,27 @@ So there are three states plus "no state"; intensity affects *meaning* only.
 
 ---
 
-## 5. Where to read
+## 5. Branch: tarot
+
+The trunk gives the method; **a domain plugs itself into the seven steps**.
+Tarot is the first one, kept on the
+[`tarot` branch](https://github.com/kite-y/relational-derivation/tree/tarot).
+
+| Trunk step | What tarot fills in |
+|---|---|
+| 1 Cutting | each symbol on a card is one element |
+| 2 Meaning | the consensus meaning of that symbol |
+| 3 Attribute | yin / yang / neutral; only colour carries intensity |
+| 4 Table | one 6-row table |
+| 5 Collection | one card is one collection |
+| 6 Merge/seep | merge: three cards pair up; seep: one state seeps into another |
+| 7 Output | heading levels + interaction table + structure section + summary |
+
+**How to verify closure**: pick a card → split symbols → assign meaning and attribute →
+judge pairwise, list every state → merge or seep when needed → every sentence in the
+output points back to a symbol.
+
+## 6. Where to read
 
 | Order | File | Content |
 |---|---|---|
@@ -118,7 +138,7 @@ So there are three states plus "no state"; intensity affects *meaning* only.
 
 ---
 
-## 6. License
+## 7. License
 
 **Dual license** — code and docs are separate.
 
@@ -135,5 +155,7 @@ For commercial use of the documentation, email me.
 
 ## Contact
 
-- **Issues**: https://github.com/kite-y/relational-derivation/issues
+**Questions, discussion, or applying it to your own domain — all welcome.**
+
+- **Issue**: https://github.com/kite-y/relational-derivation/issues
 - **Email**: zhiyuan_Y@outlook.com
