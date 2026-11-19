@@ -7,11 +7,20 @@ authors:
   - family-names: "kite-y"
     alias: "kite-y"
     email: "zhiyuan_Y@outlook.com"
+    website: "https://github.com/kite-y"
 repository-code: "https://github.com/kite-y/relational-derivation"
 url: "https://github.com/kite-y/relational-derivation"
-version: "0.2.0"
-date-released: "2026-11-18"
+version: "0.3.0"
+date-released: "2026-11-19"
 license: MIT
+license-url: "https://github.com/kite-y/relational-derivation/blob/main/LICENSE"
+preferred-citation:
+  type: generic
+  title: "关系推导法：一种不量化、可回溯的定性推演方法"
+  authors:
+    - family-names: "kite-y"
+      alias: "kite-y"
+      email: "zhiyuan_Y@outlook.com"
 keywords:
   - qualitative-analysis
   - structural-analysis
